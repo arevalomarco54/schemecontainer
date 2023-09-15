@@ -1,0 +1,26 @@
+{
+	"build": { "dockerfile": "Dockerfile" },
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/maven-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "ms"
+		},
+		"ghcr.io/devcontainers-contrib/features/pipx-package:1": {
+			"includeDeps": true,
+			"package": "black",
+			"version": "latest",
+			"injections": "pylint pytest",
+			"interpreter": "python3"
+		},
+		"ghcr.io/akhildevelops/devcontainer-features/pip:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"qingpeng.common-lisp"
+			]
+		}
+	}
+}
